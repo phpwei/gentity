@@ -14,8 +14,9 @@
 
 ## 工具命令汇总
 
+* 【一键生成指定表】 go run plustool/main.go db -m  输入表名
 * 【一键生成全部表】 go run plustool/main.go db -m  all
-
+* 【一键生成全部表自动生成 无需提醒】 go run plustool/main.go db -m  all -y
 
 ## 注意事项
 
