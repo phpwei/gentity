@@ -22,3 +22,11 @@
 
 * 生成的model结构体默认在根目录 app/models/ 下面
 * 数据库配置文件在根目录下 application.yaml
+
+## 效果展示
+
+![](https://cdn.learnku.com/uploads/images/202005/21/26539/TM3Q6KwiKq.png!large)
+
+![](https://cdn.learnku.com/uploads/images/202005/21/26539/MuyWi1U3El.png!large)
+
+![](https://cdn.learnku.com/uploads/images/202005/21/26539/Vdh6j75Ruq.png!large)
