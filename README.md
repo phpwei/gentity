@@ -15,3 +15,9 @@
 ## 工具命令汇总
 
 * 【一键生成全部表】 go run plustool/main.go db -m  all
+
+
+## 注意事项
+
+* 生成的model结构体默认在根目录 app/models/ 下面
+* 数据库配置文件在根目录下 application.yaml
