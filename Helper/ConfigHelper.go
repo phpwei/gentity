@@ -11,6 +11,7 @@ type SysConfig struct {
 		Driver string
 		DSN string
 		Prefix string
+		Path string
 	}
 }
 func LoadConfig() (*SysConfig,error)  {

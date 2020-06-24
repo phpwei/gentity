@@ -7,8 +7,7 @@ import (
 	"strings"
 )
 
-const APP_PATH="/app" //app根目录
-const APP_API_PATH = APP_PATH+"/api"
+
 const SYS_CONFIG_PATH= "/application.yaml" //全局配置文件
 var WorkDir string
 func init(){

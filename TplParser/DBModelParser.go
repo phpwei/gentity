@@ -17,6 +17,10 @@ func NewDBModelParser() *DBModelParser  {
 		return &DBModelParser{TplContent:Helper.UnGzip(resource.DB_TPL)}
 }
 func(this *DBModelParser) Parse(data interface{},target string){
+	config, err := Helper.LoadConfig()
+	if err != nil {
+		log.Fatal("missing config-file:application.yaml")
+	}
 	tpl:=template.New("DBModel").Funcs(Helper.NewTplFunction())
 	tmpl, err:= tpl.Parse(this.TplContent)
 	target = Helper.Ucfirst(Helper.CamelCase(target))
@@ -24,12 +28,12 @@ func(this *DBModelParser) Parse(data interface{},target string){
 	if err!=nil{
 		log.Fatal("db tpl parse-error:",err)
 	}
-	_,err =os.Stat(Helper.WorkDir+"/app/models/")
+	_,err =os.Stat(Helper.WorkDir+config.DB.Path)
 	if err != nil {
 		//文件夹不存在则创建文件夹
-		_ =createFile(Helper.WorkDir+"/app/models/")
+		_ =createFile(Helper.WorkDir+"config.DB.Path")
 	}
-	file,err:=os.OpenFile(Helper.WorkDir+"/app/models/"+target+".go",
+	file,err:=os.OpenFile(Helper.WorkDir+config.DB.Path+target+".go",
 		os.O_RDWR|os.O_CREATE|os.O_TRUNC,0666)
 	if err!=nil{
 		log.Fatal("model target error:",err)
