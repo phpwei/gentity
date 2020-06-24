@@ -18,6 +18,8 @@
 * 【一键生成指定表】 gentity db -m  输入表名
 * 【一键生成全部表】 gentity db -m  all
 * 【一键生成全部表自动生成 无需提醒】gentity db -m  all -y
+* 【生成配置文件到自己的根目录下】gentity conf -c
+
 
 ## 注意事项
 
