@@ -7,7 +7,7 @@
 
 ## 安装步骤
 
-*  go get -u github.com/phpwei/go-Gentity
+*  go get -u github.com/phpwei/gentity
 * 项目根目录执行命令 go mod tidy
 * go环境安装 可以参考 https://learnku.com/articles/38410
 
