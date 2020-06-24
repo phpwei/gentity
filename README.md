@@ -7,16 +7,17 @@
 
 ## 安装步骤
 
-*  go get -u github.com/phpwei/gentity
-* 项目根目录执行命令 go mod tidy
+*  go  mod init 创建项目
+* 项目根目录执行命令 go get -u github.com/phpwei/gentity
+* 自动加入环境变量 bin
 * go环境安装 可以参考 https://learnku.com/articles/38410
 
 
 ## 工具命令汇总
 
-* 【一键生成指定表】 go run plustool/main.go db -m  输入表名
-* 【一键生成全部表】 go run plustool/main.go db -m  all
-* 【一键生成全部表自动生成 无需提醒】 go run plustool/main.go db -m  all -y
+* 【一键生成指定表】 gentity db -m  输入表名
+* 【一键生成全部表】 gentity db -m  all
+* 【一键生成全部表自动生成 无需提醒】gentity db -m  all -y
 
 ## 注意事项
 
